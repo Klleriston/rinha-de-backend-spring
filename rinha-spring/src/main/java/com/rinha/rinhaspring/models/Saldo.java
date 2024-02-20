@@ -1,5 +1,6 @@
 package com.rinha.rinhaspring.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -26,6 +27,7 @@ public class Saldo {
     @Temporal(TemporalType.TIMESTAMP)
     private Date data_extrato;
     @OneToMany(mappedBy = "saldo", cascade = CascadeType.ALL)
+    @JsonIgnore
     public List<Transacao> ultimas_transacoes;
 
     public int getId() {

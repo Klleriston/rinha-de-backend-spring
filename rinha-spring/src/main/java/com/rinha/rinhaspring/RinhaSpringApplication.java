@@ -8,6 +8,7 @@ public class RinhaSpringApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RinhaSpringApplication.class, args);
+
 	}
 
 }

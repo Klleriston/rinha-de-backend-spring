@@ -1,5 +1,6 @@
 package com.rinha.rinhaspring.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -18,6 +19,7 @@ public class Transacao {
 
     @ManyToOne
     @JoinColumn(name = "saldo_id")
+    @JsonIgnore
     private Saldo saldo;
 
     public int getId() {
