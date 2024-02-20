@@ -13,6 +13,16 @@ public class Saldo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int total;
+    private int limite;
+
+    public int getLimite() {
+        return limite;
+    }
+
+    public void setLimite(int limite) {
+        this.limite = limite;
+    }
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date data_extrato;
     @OneToMany(mappedBy = "saldo", cascade = CascadeType.ALL)
